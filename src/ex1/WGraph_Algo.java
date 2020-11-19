@@ -134,7 +134,7 @@ public class WGraph_Algo implements weighted_graph_algorithms {
         prev.put(node.getKey(), null); //first the value of src is null (he have no predecessor)
 
         while (!queue.isEmpty()) {
-            WGraph_DS.Node_info currentNode = queue.remove();// the node that will removed is the node with lowest tag as we defined
+            WGraph_DS.Node_info currentNode = queue.remove();// the node that will removed is the node with lowest tag as we defined the priority queue
             currentNode.setInfo("white");//update that we visited this current node
             for (node_info neighbor : currentNode.getNi()) {
                 if (neighbor.getInfo().equalsIgnoreCase("black")) {//making sure we are working on a node that wasn't visited already

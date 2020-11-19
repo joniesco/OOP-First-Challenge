@@ -1,7 +1,8 @@
 package ex1;
 
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
+import ex1.WGraph_DS;
+import ex1.node_info;
+import ex1.weighted_graph;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -54,12 +55,9 @@ class WGraph_DSTest {
     }
 
 
-    // Test for addNode function
 
-    @Test
-    void addNode(){
 
-    }
+
 
     @Test
     void nodeSize() {
@@ -187,13 +185,13 @@ class WGraph_DSTest {
      * @param seed
      * @return
      */
-   public static weighted_graph graph_creator(int v_size, int e_size, int seed) {
+    public static weighted_graph graph_creator(int v_size, int e_size, int seed) {
         weighted_graph g = new WGraph_DS();
-                _rnd = new Random(seed);
-                for(int i=0;i<v_size;i++) {
-                    g.addNode(i);
-                 }
-                // Iterator<node_data> itr = V.iterator(); // Iterator is a more elegant and generic way, but KIS is more important
+        _rnd = new Random(seed);
+        for(int i=0;i<v_size;i++) {
+            g.addNode(i);
+        }
+        // Iterator<node_data> itr = V.iterator(); // Iterator is a more elegant and generic way, but KIS is more important
         int[] nodes = nodes(g);
         while(g.edgeSize() < e_size) {
             int a = nextRnd(0,v_size);
