@@ -82,6 +82,6 @@ This method load a graph to this graph algorithm
 -Save:
 this method Saves this weighted  graph to the given file name
 
--copy
+-copy:
 this method make a deep copy of our graph
 
