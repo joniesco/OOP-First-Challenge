@@ -3,12 +3,13 @@ Inner Class Node_info implements node_info:
 This inner class represents a node_info which is a vertex in a weighted  graph that contains few fields:
   key, info and tag. Each node can have  vertices “neighbors” which means there are weighted edges(a unergative weight) that connect it to each one of these vertices .
 The fields of this class are:
+
 -Count (static int): A variable which help us to make sure each node has a unique key. 
 Count starts at zero and in each creating new node_info, count increases by one,
  so two different nodes cannot have the same key. Count will be reset to zero on each new graph creation.
 - Key (int): Represents the key of the node.
 - Nei (HashMap<Integer, node_info>): Represents a list of the node’s neighbors. Implemented by an HashMap in form of neighbor_key - > neighbor_node_info
-Edge (HashMap<Integer, Double>): Represents a list of the node’s neighbors and the weight of the edge which connect the specific neighbor. Implemented by an HashMap in form of neighbor_key - > double weight
+-Edge (HashMap<Integer, Double>): Represents a list of the node’s neighbors and the weight of the edge which connect the specific neighbor. Implemented by an HashMap in form of neighbor_key - > double weight
  - Info (String): Represent the info (meta data) of the node(will help us for algos)
 - Tag (int): A temp variable, can be used for some markings and calculation of algorithms.
 Methods:
