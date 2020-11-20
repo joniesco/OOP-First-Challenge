@@ -1,6 +1,6 @@
 EX_1:
 Inner Class Node_info implements node_info:
-This inner class represents a node_data which is a vertex in a weighted  graph that contains few fields:
+This inner class represents a node_info which is a vertex in a weighted  graph that contains few fields:
   key, info and tag. Each node can have  vertices “neighbors” which means there are weighted edges(a unergative weight) that connect it to each one of these vertices .
 The fields of this class are:
 -Count (static int): A variable which help us to make sure each node has a unique key. 
@@ -14,7 +14,8 @@ Edge (HashMap<Integer, Double>): Represents a list of the node’s neighbors and
 Methods:
 Removing a given node, adding a given node, get the key of the given node, get the neighbors nodes of the given node, Boolean method hasNi which check if the given node is a neighbor.
  And resetCounter, a static method which reset the count to zero.
-Class WGraph_DS implements graph:
+ 
+-Class WGraph_DS implements graph:
 This class represents an undirected graph, which is a collection of nodes/vertex, the nodes can be connected to each other, but not necessarily. Creating a new graph will reset count in Node_info.
 The fields of this class are:
 - MyNodes (HashMap<Integer, node_info>): A HashMap of data nodes which represent our graph, in form of node_key -> node_data.
