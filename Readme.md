@@ -32,13 +32,13 @@ The fields of this class are:
 -gAlgo (graph): Represents our actual graph.
 Methods and algorithms:
 
-isConnected:
+-isConnected:
 
 The method will determine if the graph “is connected” – a graph is connected if and only if there is a valid path from every node to each other node.
  The method will first check some basic cases such as empty graph, and after it will use runDfsAlgo which will retrieve the number of all the visited nodes from a given source in graph -
  here source will be the first node in graph node list (getting by using iterator). isConnected will return true only if this number equals to the nodeSize of the graph.
 
-runDfsAlgo:
+-runDfsAlgo:
 
 
 Helping data structure: stack.
@@ -46,17 +46,21 @@ In this method we will use the DFS algorithm. The method gets a source to start 
 The DFS will be implemented by using a stack which will contain all the visited vertex and will always handle first the last visited vertex (DFS principle). 
 To mark a visited node, the algorithm will use the tag in each node – 1 will represent a visited node, and 0 will represent a non-visited one. Also, for each visited node, the algorithm will increase the counter, and at the end, will retrieve it.
  Before retrieving the counter, it will reset all nodes tags to 0 (resetTags), so it’ll can be use in other run.
-shortestPath list:
+
+-shortestPath list:
+
 The method retrieves a list of vertices which represents a path in the graph from a given source and destination, if exists. 
 The method will first check some basic cases, such as same source and destination node, or if one of these doesn’t exists in the graph. Then, will create an empty HashMap which will contain for each vertex it’s predecessor on the path. 
 This map will be filled by calling runDijkstraAlgo , and then will collect the path by using it in reverse way, starting by the destination.
-shortestPathDist:
+
+-shortestPathDist:
+
 The method will retrieve the size of the path between a given source and destination. The method will  check basic cases and than will use shortestPath and will just return the tag of the dest node 
  which will represent the distance  (the total weight) to get from the source node to the distance node.
 
 
 
-runDijkstraAlgo:
+-runDijkstraAlgo:
 
 Helping data structure: priorityqueue, HashMap<Integer, WGraph_DS.Node_info> prev
  
@@ -72,9 +76,12 @@ Now we will pass over all the node neighbors  . and we will check if  the neighb
 In each node we can know how we arrived to him(via who) and how much it cost us (weight) by the node tags.
 
 
-Load:
+-Load:
 This method load a graph to this graph algorithm
 
-Save:
+-Save:
 this method Saves this weighted  graph to the given file name
+
+-copy
+this method make a deep copy of our graph
 
